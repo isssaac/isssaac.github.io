@@ -91,3 +91,13 @@ html {
 		display: block;
 	}
 }
+
+.light-mode {
+	background: blue;
+	color: black;
+}
+
+.dark-mode {
+	background: black;
+	color: blue;
+}
