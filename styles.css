@@ -556,8 +556,8 @@ img {
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
 	background-color: #008b8b;
-	width: 700px;
-	height: 540px;
+	width: 590px;
+	height: 480px;
 	z-index: 2;
 	text-align: center;
 	padding: 20px;
@@ -577,7 +577,7 @@ img {
 	color: white;
 	font-size: 35px;
 	font-weight: 400;
-	line-height: 35px;
+	line-height: 40px;
 	text-align: center;
 	border-radius: 50%;
 	cursor: pointer;
@@ -622,34 +622,30 @@ img {
 	font-weight: 400;
 }
 
-.popup .responsive-iframe {
+.popup iframe {
 	position: relative;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	width: 70%;
-	height: 70%;
-	padding: 0;
-	margin: 16px;
+	padding: 5px;
+	margin: 45px;
 }
 
-.popup iframe:focus {
-	outline: none;
-}
-  
-.popup iframe[seamless] {
-	display: block;
+@media only screen and (min-width: 767px) {
+	.popup iframe {
+		position: relative;
+		width: 560px;
+		height: 315px;
+		padding: 10px;
+		margin: 0px;
+	}
 }
 
 
+/* width between 1300 and 768px can still fit in 2 demo-cards */
 @media screen and (max-width: 1300px) {
 	.demo_wrapper {
 		grid-template-columns: 1fr 1fr;
 	}
 }
 
-/* width between 1300 and 768px can still fit in 2 demo-cards */
 @media screen and (max-width: 768px) {
 	.demo_wrapper {
 		grid-template-columns: 1fr;
