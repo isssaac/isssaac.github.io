@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Examples of Code On Demand</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<!-- Navbar Section -->
+		<nav class="navbar">
+			<div class="navbar_container">
+				<a href="index.html" id="navbar_logo">ISAAC'S PROJECT</a>
+				<div class="navbar_toggle" id="mobile-menu">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+				<ul class="navbar_menu">
+					<li class="navbar_item">
+						<a href="history.html" class="navbar_links" id="history-page">HISTORY</a>
+					</li>
+					<li class="navbar_item">
+						<a href="#demo" class="navbar_links" id="demo-page">DEMO</a>
+					</li>
+					<li class="navbar_item">
+						<a href="biography.html" class="navbar_links" id="about-page">ABOUT</a>
+					</li>
+					<li class="navbar_btn">
+						<a href="index.html" class="button" id="home-page">HOME</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+        <!-- Demo Card Section -->
+		<div class="demo" id="demo">
+            <h1>Demo</h1>
+            <div class="demo_wrapper">
+                <div class="demo_card">
+                    <h2>HTML</h2>
+                    <p>Pros and Cons</p>
+                    <div class="demo_btn"><button onclick="togglePopup1()">Show Me</button></div>
+					<p>Demonstration</p>
+					<div class="demo_btn"><button onclick="togglePopup5()">Get Started</button></div>    
+                </div>
+                <div class="demo_card">
+                    <h2>CSS</h2>
+                    <p>Pros and Cons</p>
+                    <div class="demo_btn"><button onclick="togglePopup2()">Show Me</button></div>
+					<p>Demonstration</p>
+					<div class="demo_btn"><button onclick="togglePopup6()">Get Started</button></div>    
+                </div>
+                <div class="demo_card">
+                    <h2>JavaScript</h2>
+                    <p>Pros and Cons</p>
+                    <div class="demo_btn"><button onclick="togglePopup3()">Show Me</button></div>
+					<p>Demonstration</p>
+					<div class="demo_btn"><button onclick="togglePopup7()">Get Started</button></div>    
+                </div>
+                <div class="demo_card">
+                    <h2>AJAX</h2>
+                    <p>Pros and Cons</p>
+                    <div class="demo_btn"><button onclick="togglePopup4()">Show Me</button></div>
+					<p>Demonstration</p>
+					<div class="demo_btn"><button onclick="togglePopup8()">Get Started</button></div>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Pop Up Pros and Cons Section-->
+		<div class="popup" id="popup-1">
+			<div class="overlay"></div>
+			<div class="content">
+				<div class="close-btn" onclick="togglePopup1()">&times;</div>
+				<h1>HTML</h1>
+				<h2>Advantages</h2>
+				<ul>
+					<li>HTML is browser friendly</li>
+					<li>Simple to learn</li>
+					<li>Lightweight and quick</li>
+					<li>Open-source, which allows organizations to utilize</li>
+					<li>Multibrowser support</li>
+					<li>HTML upholds data storage with no termination date</li>
+				</ul>
+				<h2>Disadvantages</h2>
+				<ul>
+					<li>Static language so doesn't uphold dynamic results</li>
+					<li>A great deal of code needed even for a simple page</li>
+					<li>Long codes becomes complex</li>
+					<li>Can be quite time consuming to maintain a web page</li>
+					<li>Security features offered by HTML are limited</li>
+					<li>Errors can be costly</li>
+				</ul>
+			</div>
+		</div>
+		<div class="popup" id="popup-2">
+			<div class="overlay"></div>
+			<div class="content">
+				<div class="close-btn" onclick="togglePopup2()">&times;</div>
+				<h1>CSS</h1>
+				<h2>Advantages</h2>
+				<ul>
+					<li>CSS saves a lot of time</li>
+					<li>Helps to make consistent and spontaneous changes</li>
+					<li>Improves the loading speed of the page</li>
+					<li>Has the ability to re-position</li>
+					<li>Has better device compatibility</li>
+					<li>Wider design variety than pure HTML</li>
+				</ul>
+				<h2>Disadvantages</h2>
+				<ul>
+					<li>Could be cross-browser issues while using CSS</li>
+					<li>Multiple levels of CSS, which can create confusion for beginners</li>
+					<li>Be ready to fix HTML tags associated with CSS</li>
+					<li>Same CSS data may be interpreted differently by different or outdated browsers</li>
+					<li>Vulnerable and easily accessible because of its open text-based system</li>
+				</ul>
+			</div>
+		</div>
+		<div class="popup" id="popup-3">
+			<div class="overlay"></div>
+			<div class="content">
+				<div class="close-btn" onclick="togglePopup3()">&times;</div>
+				<h1>JavaScript</h1>
+				<h2>Advantages</h2>
+				<ul>
+					<li>An 'interpreted' language, which reduces the time to compile</li>
+					<li>Various interfaces for creating catchy webpages</li>
+					<li>Operates on the client-side to save server load</li>
+					<li>Works perfect with other programming languages </li>
+					<li>Capable of front-end as well as back-end development</li>
+				</ul>
+				<h2>Disadvantages</h2>
+				<ul>
+					<li>Different view from different browsers</li>
+					<li>Lack of debugging facility</li>
+					<li>Only supports single inheritance and not multiple inheritance</li>
+					<li>Sluggish bitwise function</li>
+					<li>A single code error can stop the rendering of the entire JavaScript code!!</li>
+				</ul>
+			</div>
+		</div>
+		<div class="popup" id="popup-4">
+			<div class="overlay"></div>
+			<div class="content">
+				<div class="close-btn" onclick="togglePopup4()">&times;</div>
+				<h1>AJAX</h1>
+				<h2>Advantages</h2>
+				<ul>
+					<li>Improved user experience</li>
+					<li>Asynchronous processing</li>
+					<li>Reduced server hits and network load</li>
+					<li>Platform and architecture neutrality</li>
+					<li>Multibrowser support</li>
+					<li>Faster page renders and improved response times</li>
+				</ul>
+				<h2>Disadvantages</h2>
+				<ul>
+					<li>Massive dependency on JavaScript, which becomes a constraint</li>
+					<li>Might not be a good option for mobile applications</li>
+					<li>Can be quite difficult to debug</li>
+					<li>Can heavily increase the code size of your web page</li>
+					<li>Tend to increase the load on web server</li>
+					<li>Make your page prone to potential security threats</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Pop Up Demonstration Section-->
+		<div class="popup" id="popup-5">
+			<div class="overlay"></div>
+			<div class="content2">
+				<div class="close-btn" onclick="togglePopup5()">&times;</div>
+				<h1>HTML</h1>
+				<h2>HTML Explained in 5 Minutes</h2>
+				<br>
+				<br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/salY_Sm6mv4" 
+				title="YouTube video player" frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+				allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="popup" id="popup-6">
+			<div class="overlay"></div>
+			<div class="content2">
+				<div class="close-btn" onclick="togglePopup6()">&times;</div>
+				<h1>CSS</h1>
+				<h2>Intro to CSS Demonstration</h2>
+				<br>
+				<br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/H-TPpxwYjrA" 
+				title="YouTube video player" frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+				allowfullscreen></iframe>
+			</div>
+		</div>	
+		<div class="popup" id="popup-7">
+			<div class="overlay"></div>
+			<div class="content2">
+				<div class="close-btn" onclick="togglePopup7()">&times;</div>
+				<h1>JavaScript</h1>
+				<h2>Coding "Snake" in 4 min 30 sec</h2>
+				<br>
+				<br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/xGmXxpIj6vs" 
+				title="YouTube video player" frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+				allowfullscreen></iframe>
+			</div>
+		</div>	
+		<div class="popup" id="popup-8">
+			<div class="overlay"></div>
+			<div class="content2">
+				<div class="close-btn" onclick="togglePopup8()">&times;</div>
+				<h1>AJAX</h1>
+				<h2>How to Get Started With AJAX</h2>
+				<br>
+				<br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/tNKD0kfel6o" 
+				title="YouTube video player" frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+				allowfullscreen></iframe>
+			</div>
+		</div>			
+
+        <!-- Footer Section -->
+		<div class="footer__container">
+			<section class="social__media">
+				<div class="social__media--wrap">
+					<div class="footer__logo">
+						<a href="https://teaching.csse.uwa.edu.au/units/CITS3403/" id="footer__logo">CITS5505</a>
+					</div>
+					<p class="website__rights">©2022 ISAAC HUANG. All Rights Reserved.</p>
+					<div class="social__icons">
+						<a href="https://www.linkedin.com/in/isssaac/" target="_blank" class="social__icon--link"><img src="images/Lkd.png" alt="LinkedIn" style="width:25px;height:25px;"></a>
+						<a href="https://www.facebook.com/F.Isaac.H/" target="_blank" class="social__icon--link"><img src="images/FB.png" alt="Facebook" style="width:25px;height:25px;"></a>
+						<a href="https://github.com/isssaac/" target="_blank" class="social__icon--link"><img src="images/github-icon.png" alt="GitHub" style="width:26px;height:26px;"></a>						
+					</div>
+				</div>
+			</section>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>

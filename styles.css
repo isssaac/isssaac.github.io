@@ -1,0 +1,719 @@
+/* Import fonts from GoogleAPIs */
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;400&display=swap");
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Rajdhani", sans-serif;
+	font-weight: 700;
+	scroll-behavior: smooth;
+}
+
+/* Navbar Styling*/
+.navbar {
+	background-color: black;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.6rem;
+	position: sticky; 
+	top: 0; /* stays at the top */
+	z-index: 999; /* stays at the front */
+	cursor: -webkit-grabbing;
+	cursor: grabbing;
+}
+
+.navbar_container {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	z-index: 1;
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 50px;
+}
+
+/* gradient color code library from https://uigradients.com/#ForeverLost */
+#navbar_logo {
+	background-color: #00b4db;
+	background-image: linear-gradient(to top, #b2fefa 0%, #0ed2f7 100%);
+	background-size: 100%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	display: flex;
+	align-items: center;
+	cursor: -webkit-grab; /* change cursor to a bigger palm when hovering */
+	cursor: grab; /* because the pointer is too dark to see */
+	text-decoration: none;
+	font-size: 2rem;
+}
+
+.navbar_menu {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.navbar_item {
+	height: 80px;
+}
+
+.navbar_links {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 125px;
+	text-decoration: none;
+	height: 100%;
+	transition: all 0.3s ease;
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+
+.navbar_btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1rem;
+	width: 100%;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	padding: 10px 20px;
+	height: 100%;
+	width: 100%;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	/* gradient color code library from https://uigradients.com/#ForeverLost */
+	background: #c2e59c; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #64b3f4, #c2e59c);
+	background: linear-gradient(to bottom, #64b3f4, #c2e59c);
+	color: #fff;
+	transition: all 0.3s ease; /* make the color transition smoother */
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+
+.navbar_links:hover {
+	color: #fdbb2d;
+	transition: all 0.3s ease; /* make the color transition nice and smooth */
+}
+
+
+/* 
+Screen settings on mobiles or tablets. 
+860px is the min width to fit in all elements in navbar.
+*/
+@media screen and (max-width: 860px) {
+	.navbar_container {
+		display: flex;
+		justify-content: space-between;
+		height: 80px;
+		z-index: 1;
+		width: 100%;
+		max-width: 1300px;
+		padding: 0;
+	}
+
+	.navbar_menu {
+		display: grid;
+		grid-template-columns: auto;
+		margin: 0;
+		width: 100%;
+		position: absolute;
+		top: -1000px;
+		opacity: 1;
+		transition: all 0.5s ease;
+		z-index: -1;
+	}
+
+	.navbar_menu.active {
+		background-color: black;
+		top: 100%;
+		opacity: 1;
+		transition: all 0.5s ease;
+		z-index: 99;
+		height: 60vh;
+		font-size: 1.6rem;
+	}
+
+	#navbar_logo {
+		padding-left: 25px;
+	}
+
+	.navbar_toggle .bar {
+		width: 25px;
+		height: 3px;
+		margin: 5px auto;
+		transition: all 0.3s ease-in-out;
+		background-color: #fff;
+	}
+
+	.navbar_item {
+		width: 100%;
+	}
+
+	.navbar_links {
+		text-align: center;
+		padding: 2rem;
+		width: 100%;
+		display: table;
+	}
+
+	.navbar_btn {
+		padding-bottom: 2rem;
+	}
+
+	.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 80%;
+		height: 80px;
+		margin: 0;
+	}
+
+	#mobile-menu {
+		position: absolute;
+		top: 20%;
+		right: 5%;
+		transform: translate(5%, 20%);
+		cursor: -webkit-grab;
+		cursor: grab;
+	}
+
+	.navbar_toggle .bar {
+		display: block;
+		cursor: -webkit-grabbing;
+		cursor: grabbing;
+	}
+
+	/* little animation on the menu button */
+	#mobile-menu.is-active .bar:nth-child(2) {
+		opacity: 0;
+	}
+	#mobile-menu.is-active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+	#mobile-menu.is-active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+}
+
+
+/* Hero Section */
+.hero {
+	height: 100vh;
+	background: url("images/bgimage.png");
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding: 200px 0;
+	cursor: -webkit-grabbing;
+	cursor: grabbing;
+}
+
+.hero_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 90%;
+	text-align: center;
+	padding: 30px;
+}
+
+.hero_heading {
+	font-size: 120px;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	text-decoration: none; /* remove the underline of hyperlink */
+	color: #fff;
+	transition: all 0.35s ease; /* make the letters split more natural and smoother */
+}
+
+.hero_heading span {
+	background: #22c1c3; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #fdbb2d, #22c1c3);
+	background: linear-gradient(to bottom, #fdbb2d, #22c1c3);
+	background-size: 100%;
+	background-clip: text;
+	-webkit-background-clip: text; /* text effects */
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+}
+
+.hero_description {
+	font-size: 30px;
+	background: #c2e59c; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #64b3f4, #c2e59c);
+	background: linear-gradient(to bottom, #64b3f4, #c2e59c);
+	background-size: 100%;
+	background-clip: text;
+	-webkit-background-clip: text; /* text effects */
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+}
+
+
+/* Displayed on mobiles or tablets */
+@media screen and (max-width: 860px) {
+	.hero_heading {
+		font-size: 60px;
+	}
+
+	.hero_description {
+		font-size: 20px;
+	}
+	.hero {
+		height: 100vh;
+		background: url("images/bgimage.png"); /* background picture of home page */
+		background-size: contain;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+	}
+}
+
+
+/* Timeline Styling */
+.flex-container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 100px 0;
+	background-color: #2f4f4f;
+	cursor: -webkit-grabbing;
+	cursor: grabbing;
+}
+
+.timeline {
+	width: 80%;
+	height: auto;
+	max-width: 1024px;
+	margin: 0 auto;
+	position: relative;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.timeline ul {
+	list-style: none;
+}
+
+.timeline ul li {
+	padding: 20px;
+	background-color: #008b8b;
+	color: white;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.timeline ul li:last-child {
+	margin-bottom: 0;
+}
+
+.timeline-content h1 {
+	font-family: "Prompt", sans-serif;
+	font-size: 1.6rem;
+	font-weight: 500;
+	line-height: 35px;
+	margin-bottom: 10px;
+}
+
+.timeline-content p {
+	font-family: "Prompt", sans-serif;
+	font-size: 1.2rem;
+	line-height: 30px;
+	font-weight: 400;
+}
+
+.timeline-content .date {
+	font-family: "Prompt", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 10px;
+	letter-spacing: 2px;
+}
+
+
+/* Dual sections of Timeline on tablet screen size or above */
+@media only screen and (min-width: 767px) {
+	.timeline::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 2px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: white;
+	}
+	.timeline ul li {
+		width: 50%;
+		margin-bottom: 50px;
+		position: relative;
+	}
+	.timeline ul li:nth-child(odd) {
+		float: left;
+		clear: right;
+		transform: translateX(-30px);
+		border-radius: 20px 0px 20px 20px;
+	}
+	.timeline ul li:nth-child(even) {
+		float: right;
+		clear: left;
+		transform: translateX(30px);
+		border-radius: 0px 20px 20px 20px;
+	}
+	.timeline ul li::before {
+		content: "";
+		position: absolute;
+		height: 20px;
+		width: 20px;
+		background-color: white;
+		border-radius: 50%;
+		top: 0;
+	}
+	.timeline ul li:nth-child(odd)::before {
+		transform: translate(50%, -50%);
+		right: -30px;
+	}
+	.timeline ul li:nth-child(even)::before {
+		transform: translate(-50%, -50%);
+		left: -30px;
+	}
+	.timeline ul li:hover::before {
+		background-color: gold;
+	}
+	.timeline-content .date {
+		position: absolute;
+		top: -30px;
+	}
+}
+
+
+/* Demo Section */
+.demo {
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding: 10rem 0;
+	cursor: -webkit-grabbing;
+	cursor: grabbing;
+}
+
+.demo h1 {
+	background-color: #00b4db;
+	background-image: linear-gradient(to right, #b2fefa 0%, #0ed2f7 100%);
+	background-size: 100%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	margin-bottom: 1rem;
+	font-size: 5.8rem;
+}
+
+.demo_wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+}
+
+.demo_card {
+	margin: 10px;
+	height: 425px;
+	width: 300px;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+	background: #3494e6; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ec6ead, #3494e6);
+	background: linear-gradient(to right, #ec6ead, #3494e6);
+	transition: 0.3s ease-in;
+}
+
+.demo_card:nth-child(2) {
+	background: #8360c3; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);
+	background: linear-gradient(to right, #2ebf91, #8360c3);
+}
+
+.demo_card:nth-child(3) {
+	background: #22c1c3; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);
+	background: linear-gradient(to right, #fdbb2d, #22c1c3);
+}
+
+.demo_card:nth-child(4) {
+	background: #f1f2b5; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #135058, #f1f2b5);
+	background: linear-gradient(to right, #135058, #f1f2b5);
+}
+
+.demo_card h2 {
+	text-align: center;
+	font-size: 2.8rem;
+}
+
+.demo_card p {
+	text-align: center;
+	margin-top: 24px;
+	font-size: 1.5rem;
+}
+
+.demo_btn {
+	display: flex;
+	justify-content: center;
+	margin-top: 16px;
+}
+
+.demo_card button {
+	color: #fff;
+	padding: 14px 24px;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	background-color: black;
+	font-size: 1.5rem;
+}
+
+.demo_card button:hover {
+	color: #fdbb2d;
+	cursor: -webkit-grab; 
+	cursor: grab;
+}
+
+.demo_card:hover {
+	transform: scale(1.075);
+	transition: 0.3s ease-in;
+}
+
+.popup .overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	z-index: 1;
+	display: none;
+}
+
+.popup .content {
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	background-color: #008b8b;
+	width: 480px;
+	height: 580px;
+	z-index: 2;
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	font-family: "Prompt", sans-serif;
+	cursor: -webkit-grabbing; /* change cursor in the pop up window */
+	cursor: grabbing;
+}
+
+.popup .content2 {
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	background-color: #008b8b;
+	width: 700px;
+	height: 540px;
+	z-index: 2;
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	font-family: "Prompt", sans-serif;
+	cursor: -webkit-grabbing; /* change cursor in the pop up window */
+	cursor: grabbing;
+}
+.popup .close-btn {
+	position: absolute;
+	right: 48%;
+	bottom: 15px;
+	width: 35px;
+	height: 35px;
+	background-color: #222;
+	color: white;
+	font-size: 35px;
+	font-weight: 400;
+	line-height: 35px;
+	text-align: center;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.popup.active .overlay {
+	display: block;
+}
+
+.popup.active .content {
+	transition: all 300ms ease-in-out;
+	transform: translate(-50%, -50%) scale(1);
+}
+.popup.active .content2 {
+	transition: all 300ms ease-in-out;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.popup h1 {
+	color: #fdbb2d;
+	font-size: 46px;
+}
+.popup h2 {
+	text-align: center;
+	background-color: #00b4db;
+	background-image: linear-gradient(to right, #b2fefa 0%, #0ed2f7 100%);
+}
+
+.popup ul {
+	text-align: left;
+	color: white;
+	font-size: 18px;
+	padding: 12px;
+	margin: 12px;
+}
+
+.popup li {
+	text-align: left;
+	color: white;
+	font-size: 15px;
+	font-family: "Prompt", sans-serif;
+	font-weight: 400;
+}
+
+.popup iframe:focus {
+	outline: none;
+}
+  
+.popup iframe[seamless] {
+	display: block;
+}
+
+@media screen and (max-width: 1300px) {
+	.demo_wrapper {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* width between 1300 and 768px can still fit in 2 demo-cards */
+@media screen and (max-width: 768px) {
+	.demo_wrapper {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+/* Footer Styling */
+.footer__container {
+	background-color: black;
+	padding: 0.2rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: -webkit-grabbing;
+	cursor: grabbing;
+}
+
+#footer__logo {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	cursor: -webkit-grab;
+	cursor: grab;
+	text-decoration: none;
+	font-size: 1.3rem;
+	font-weight: 400; /* thiner fonts for footer */
+}
+
+.social__media {
+	max-width: 1200px;
+	width: 100%;
+}
+
+.social__icon--link {
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+
+.social__media--wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 1100px;
+	margin: 3px auto 0 auto;
+}
+
+.social__icons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 170px;
+}
+
+.website__rights {
+	color: #fff;
+	font-size: 1.3rem;
+	font-weight: 400; /* thiner fonts for footer */
+}
+
+
+/* Footer Styling on smaller screens */
+@media screen and (max-width: 860px) {
+	#footer__logo {
+		margin-bottom: 0.4rem;
+		font-size: 1.1rem;
+		font-weight: 400; /* thiner fonts for footer */
+	}
+
+	.website__rights {
+		margin-bottom: 0.8rem;
+		font-size: 1.1rem;
+		font-weight: 400; /* thiner fonts for footer */
+	}
+
+	.social__media--wrap {
+		flex-direction: column;
+	}
+}
