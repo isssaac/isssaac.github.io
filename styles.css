@@ -287,7 +287,7 @@ Screen settings on mobiles or tablets.
 	.hero {
 		height: 100vh;
 		display: flex;
-		background: url("images/mobile.png"); /* background picture of home page */
+		background: url("images/mobile1.png"); /* background picture of home page */
 		background-size: cover;
 		justify-content: center;
 		align-items: center;
