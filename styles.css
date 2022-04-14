@@ -240,7 +240,7 @@ Screen settings on mobiles or tablets.
 }
 
 .hero_heading {
-	font-size: 120px;
+	font-size: 139px;
 	justify-content: center;
 	align-items: center;
 	position: relative;
@@ -262,7 +262,7 @@ Screen settings on mobiles or tablets.
 }
 
 .hero_description {
-	font-size: 30px;
+	font-size: 35px;
 	background: #c2e59c; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to bottom, #64b3f4, #c2e59c);
 	background: linear-gradient(to bottom, #64b3f4, #c2e59c);
@@ -282,7 +282,7 @@ Screen settings on mobiles or tablets.
 	}
 
 	.hero_description {
-		font-size: 30px;
+		font-size: 25px;
 	}
 	.hero {
 		height: 100vh;

@@ -55,7 +55,7 @@ navLogo.addEventListener("click", hideMobileMenu);
 // Animation on hero heading of the home page
 const heroHeading = document.querySelector(".hero_heading");
 const headingSplit = () => {
-	heroHeading.style.letterSpacing = "25px";
+	heroHeading.style.letterSpacing = "29px";
 	setTimeout(() => {
 		heroHeading.style.letterSpacing = "";
 	}, 700);
