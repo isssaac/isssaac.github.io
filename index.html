@@ -1,184 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, user-scalable=yes"
-		/>
-
-		<!-- CSS -->
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="style.css" />
-
-		<!-- JS -->
-		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-			crossorigin="anonymous"
-		></script>	
-		<script src="app.js"></script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Code On Demand Project</title>
+		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
-		<!-- Navbar-->
-		<!-- fixed-top makes navbar stay at the top -->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#">ISAAC'S PAGE</a>
-				<!-- toggling fold / expand buttons according to the screen size -->
-				<!-- very useful for viewing the website on mobile device -->
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#about">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">LinkedIn</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">GitHub</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Skills</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Portoflio</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Contact</a>
-						</li>
-						
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="#"
-								id="navbarDropdown"
-								role="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>
-								Dropdown
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><hr class="dropdown-divider" /></li>
-								<li>
-									<a class="dropdown-item" href="#">Something else here</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-
-					<form class="d-flex">
-						<input
-							class="form-control me-2"
-							type="search"
-							placeholder="Search"
-							aria-label="Search"
-						/>
-						<button class="btn btn-outline-success" type="submit">
-							Search
-						</button>
-					</form>
+		<!-- Navbar Section -->
+		<nav class="navbar">
+			<div class="navbar_container">
+				<a href="#home" id="navbar_logo">ISAAC'S PROJECT</a>
+				<div class="navbar_toggle" id="mobile-menu">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
 				</div>
+				<ul class="navbar_menu">
+					<li class="navbar_item">
+						<a href="history.html" class="navbar_links" id="history-page">HISTORY</a>
+					</li>
+					<li class="navbar_item">
+						<a href="demo.html" class="navbar_links" id="demo-page">DEMO</a>
+					</li>
+					<li class="navbar_item">
+						<a href="biography.html" class="navbar_links" id="about-page">ABOUT</a>
+					</li>
+					<li class="navbar_btn">
+						<a href="#home" class="button" id="home-page">HOME</a>
+					</li>
+				</ul>
 			</div>
 		</nav>
 
-		<!-- Main Area-->
+		<!-- Hero Section -->
 		<section class="bgimage" id="main">
-			<div>
-				<h1>Padding</h1>
-			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div
-						class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 hero-text"
-					>
-						<h1 class="hero-title">I am Isaac and this is my page.</h1>
-						<h4 class="hero-description">
-							This is where I will put all my projects.
-						</h4>
-					</div>
+			<div class="hero" id="home">
+				<div class="hero_container">
+					<br>
+					<br>
+					<p class="hero_description">
+						Time Machine To<br />The History of Code on Demand
+					</p>
+					<a class="hero_heading" id="start-history" href="history.html"
+						><span>START</span></a>
 				</div>
 			</div>
 		</section>
 
-		<!-- About Section -->
-		<section id="about">
-			<div>
-				<button id="dark-mode" class="btn btn-secondary"> Dark Theme </button>
-			</div>
-			<div class="about-section">
-				<h1>About Us Page</h1>
-				<p>Some text about who we are and what we do.</p>
-				<p>
-					Resize the browser window to see that this page is responsive by the
-					way.
-				</p>
-			</div>
-
-			<h2 style="text-align: center">Our Team</h2>
-			<div class="row">
-				<div class="column">
-					<div class="card">
-						<img src="/w3images/team1.jpg" alt="Jane" style="width: 100%" />
-						<div class="container">
-							<h2>Jane Doe</h2>
-							<p class="title">CEO & Founder</p>
-							<p>Some text that describes me lorem ipsum ipsum lorem.</p>
-							<p>jane@example.com</p>
-							<p><button class="button">Contact</button></p>
-						</div>
+		<!-- Footer Section -->
+		<div class="footer__container">
+			<section class="social__media">
+				<div class="social__media--wrap">
+					<div class="footer__logo">
+						<a href="https://teaching.csse.uwa.edu.au/units/CITS3403/" id="footer__logo">CITS5505</a>
+					</div>
+					<p class="website__rights">©2022 ISAAC HUANG. All Rights Reserved.</p>
+					<div class="social__icons">
+						<a href="https://www.linkedin.com/in/isssaac/" target="_blank" class="social__icon--link"><img src="images/Lkd.png" alt="LinkedIn" style="width:25px;height:25px;"></a>
+						<a href="https://www.facebook.com/F.Isaac.H/" target="_blank" class="social__icon--link"><img src="images/FB.png" alt="Facebook" style="width:25px;height:25px;"></a>
+						<a href="https://github.com/isssaac/" target="_blank" class="social__icon--link"><img src="images/github-icon.png" alt="GitHub" style="width:26px;height:26px;"></a>						
 					</div>
 				</div>
-
-				<div class="column">
-					<div class="card">
-						<img src="/w3images/team2.jpg" alt="Mike" style="width: 100%" />
-						<div class="container">
-							<h2>Mike Ross</h2>
-							<p class="title">Art Director</p>
-							<p>Some text that describes me lorem ipsum ipsum lorem.</p>
-							<p>mike@example.com</p>
-							<p><button class="button">Contact</button></p>
-						</div>
-					</div>
-				</div>
-
-				<div class="column">
-					<div class="card">
-						<img src="/w3images/team3.jpg" alt="John" style="width: 100%" />
-						<div class="container">
-							<h2>John Doe</h2>
-							<p class="title">Designer</p>
-							<p>Some text that describes me lorem ipsum ipsum lorem.</p>
-							<p>john@example.com</p>
-							<p><button class="button">Contact</button></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+			</section>
+		</div>
+		<script src="app.js"></script>
 	</body>
 </html>
