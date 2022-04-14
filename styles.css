@@ -240,7 +240,7 @@ Screen settings on mobiles or tablets.
 }
 
 .hero_heading {
-	font-size: 139px;
+	font-size: 140px;
 	justify-content: center;
 	align-items: center;
 	position: relative;
@@ -278,7 +278,7 @@ Screen settings on mobiles or tablets.
 /* Displayed on mobiles or tablets */
 @media screen and (max-width: 860px) {
 	.hero_heading {
-		font-size: 116px;
+		font-size: 120px;
 	}
 
 	.hero_description {
