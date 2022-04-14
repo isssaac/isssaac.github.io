@@ -622,6 +622,18 @@ img {
 	font-weight: 400;
 }
 
+.popup .responsive-iframe {
+	position: relative;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 70%;
+	height: 70%;
+	padding: 0;
+	margin: 16px;
+}
+
 .popup iframe:focus {
 	outline: none;
 }
@@ -629,6 +641,7 @@ img {
 .popup iframe[seamless] {
 	display: block;
 }
+
 
 @media screen and (max-width: 1300px) {
 	.demo_wrapper {
