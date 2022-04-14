@@ -278,11 +278,11 @@ Screen settings on mobiles or tablets.
 /* Displayed on mobiles or tablets */
 @media screen and (max-width: 860px) {
 	.hero_heading {
-		font-size: 60px;
+		font-size: 116px;
 	}
 
 	.hero_description {
-		font-size: 20px;
+		font-size: 30px;
 	}
 	.hero {
 		height: 100vh;
