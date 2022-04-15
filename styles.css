@@ -443,7 +443,7 @@ img {
 	-webkit-text-fill-color: transparent;
 	-moz-text-fill-color: transparent;
 	margin-bottom: 1rem;
-	font-size: 65px;
+	font-size: 80px;
 }
 
 .demo_wrapper {
@@ -651,6 +651,10 @@ img {
 @media screen and (max-width: 768px) {
 	.demo_wrapper {
 		grid-template-columns: 1fr;
+	}
+	
+	.demo h1 {
+		font-size: 3rem;
 	}
 }
 
