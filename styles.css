@@ -435,13 +435,15 @@ img {
 	background-color: #00b4db;
 	background-image: linear-gradient(to right, #b2fefa 0%, #0ed2f7 100%);
 	background-size: 100%;
+	justify-content: center;
+	align-items: center;
 	background-clip: text;
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-moz-text-fill-color: transparent;
 	margin-bottom: 1rem;
-	font-size: 5.8rem;
+	font-size: 65px;
 }
 
 .demo_wrapper {
