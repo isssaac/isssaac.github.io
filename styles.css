@@ -538,8 +538,8 @@ img {
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
 	background-color: #008b8b;
-	width: 480px;
-	height: 580px;
+	width: 450px;
+	height: 620px;
 	z-index: 2;
 	text-align: center;
 	padding: 20px;
